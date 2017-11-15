@@ -1,0 +1,1 @@
+"# adblocker-detector-plus" 

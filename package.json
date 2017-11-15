@@ -1,0 +1,19 @@
+{
+  "name": "adblocker-detector",
+  "version": "0.0.1",
+  "description": "adblocker detector",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "adblocker",
+    "detector"
+  ],
+  "author": "Fernando Barrios",
+  "license": "ISC",
+  "dependencies": {
+    "static-server": "^2.0.6"
+  }
+}
