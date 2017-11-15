@@ -1,25 +1,33 @@
-var adblockerDetector = $('#adblockerDetector');
+var adblockerDetector = document.getElementById('adblockerDetector');
 var modalTitle = 'Adblock detected!';
-var buttonClose = `<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	          <span aria-hidden="true">&times;</span>
-	        </button>`
+var buttonClose = `<span class="close">×</span>`
 
-var modal = `<div class="modal fade" id="adblockModal" tabindex="-1" role="dialog" aria-labelledby="adblockModalLabel" aria-hidden="true">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <h5 class="modal-title" id="adblockModalLabel">${modalTitle}</h5>
-	        ${buttonClose}
-	      </div>
-	      <div class="modal-body">
-	        ...
-	      </div>
+var modal = `<div id="mpopupBox" class="mpopup">
+	    <div class="mpopup-content">
+	        <div class="mpopup-head">
+	            ${buttonClose}
+	            <h2>${modalTitle}</h2>
+	        </div>
+	        <div class="mpopup-main">
+	            <p>This is a simple modal popup using JavaScript and CSS</p>
+	            <p>Please the content...</p>
+	        </div>
 	    </div>
-	  </div>
 	</div>`;
 
-adblockerDetector.append(modal);
+document.body.innerHTML +=modal;
+
+// get the mPopup
+var mpopup = document.getElementById('mpopupBox');
+
+// get the close action element
+var close = document.getElementsByClassName("close")[0];
+
+// close the mPopup once close element is clicked
+close.onclick = function() {
+    mpopup.style.display = "none";
+}
 
 if(typeof adblockUnavailable === 'undefined' || adblockUnavailable === false) {
-    $('#adblockModal').modal('show');
+	mpopup.style.display = "block";
 }
