@@ -1,17 +1,12 @@
 var adblockerDetector = document.getElementById('adblockerDetector');
 var modalTitle = 'Adblock detected!';
-var buttonClose = `<span class="close">×</span>`
+var buttonClose = `<span class="close">X</span>`
 
 var modal = `<div id="mpopupBox" class="mpopup">
-	    <div class="mpopup-content">
-	        <div class="mpopup-head">
-	            ${buttonClose}
-	            <h2>${modalTitle}</h2>
-	        </div>
-	        <div class="mpopup-main">
-	            <p>This is a simple modal popup using JavaScript and CSS</p>
-	            <p>Please the content...</p>
-	        </div>
+	    <div>
+	    	${buttonClose}
+        	<h2>${modalTitle}</h2>
+	        <p>Hi! We have detected you are using an ad-blocker plugin on your browser. Please disable AdBlock on this website.</p>
 	    </div>
 	</div>`;
 
@@ -25,9 +20,9 @@ var close = document.getElementsByClassName("close")[0];
 
 // close the mPopup once close element is clicked
 close.onclick = function() {
-    mpopup.style.display = "none";
+    mpopup.className = "mpopup";
 }
 
 if(typeof adblockUnavailable === 'undefined' || adblockUnavailable === false) {
-	mpopup.style.display = "block";
+	mpopup.className = "mpopup showed";
 }
