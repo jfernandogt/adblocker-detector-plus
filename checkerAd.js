@@ -1,6 +1,7 @@
 var adblockerDetector = document.getElementById('adblockerDetector');
 var modalTitle = 'Adblock detected!';
 var buttonClose = `<span class="close">X</span>`
+var pluginEnabled = false;
 
 var modal = `<div id="mpopupBox" class="mpopup">
 	    <div>
@@ -23,6 +24,6 @@ close.onclick = function() {
     mpopup.className = "mpopup";
 }
 
-if(typeof adblockUnavailable === 'undefined' || adblockUnavailable === false) {
+if((typeof adblockUnavailable === 'undefined' || adblockUnavailable === false) && pluginEnabled) {
 	mpopup.className = "mpopup showed";
 }
