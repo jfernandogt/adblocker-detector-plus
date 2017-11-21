@@ -1,7 +1,9 @@
 var adblockerDetector = document.getElementById('adblockerDetector');
 var modalTitle = 'Adblock detected!';
-var buttonClose = `<span class="close">X</span>`
-var pluginEnabled = false;
+var pluginEnabled = true;
+
+var availableToClose = true;
+var buttonClose = availableToClose ? '<span class="close">X</span>' : '';
 
 var modal = `<div id="mpopupBox" class="mpopup">
 	    <div>
@@ -16,12 +18,14 @@ document.body.innerHTML +=modal;
 // get the mPopup
 var mpopup = document.getElementById('mpopupBox');
 
-// get the close action element
-var close = document.getElementsByClassName("close")[0];
+if (availableToClose) {
+	// get the close action element
+	var close = document.getElementsByClassName("close")[0];
 
-// close the mPopup once close element is clicked
-close.onclick = function() {
-    mpopup.className = "mpopup";
+	// close the mPopup once close element is clicked
+	close.onclick = function() {
+	    mpopup.className = "mpopup";
+	}
 }
 
 if((typeof adblockUnavailable === 'undefined' || adblockUnavailable === false) && pluginEnabled) {
