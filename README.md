@@ -4,6 +4,8 @@
 
 Detect all visitors that use adblockers 
 
+DEMO: https://jfbarrios.com/adblocker-detector-plus/
+
 Show a message to the visitors, ask them to deactivate their adblocker. 
 You can enable the option to shut down the message or to never disappear until they have deactivated the Adblocker. 
 
