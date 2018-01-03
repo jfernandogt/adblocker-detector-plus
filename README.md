@@ -1,4 +1,4 @@
-# adblocker-detector-plus
+# Adblocker Detector Plus
 
 ![Screenshot](plugin.jpg)
 
