@@ -17,4 +17,12 @@ You can do the following:
  
  The installation can be done in 5 minutes maximum 
  
+
+# If you need to run in localserver
+
+1. please install npm
+2. go to the root folder in an cli
+3. run `npm install`
+4. run `npm start`
+5. go to `http://localhost:{PORT}` you can see the port on the cli 
  
