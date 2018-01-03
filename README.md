@@ -1,5 +1,7 @@
 # adblocker-detector-plus
 
+![Screenshot](plugin.jpg)
+
 Detect all visitors that use adblockers 
 
 Show a message to the visitors, ask them to deactivate their adblocker. 
@@ -14,3 +16,5 @@ You can do the following:
 - Save the plugin files for your web by any route 
  
  The installation can be done in 5 minutes maximum 
+ 
+ 
